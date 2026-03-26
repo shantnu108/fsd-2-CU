@@ -86,7 +86,7 @@ Experiment-11/
 - **GitHub Username:** shantnu108 
 
 - **GitHub Repository:**  
-  https://github.com/shantnu108/fsd-2-CU/tree/main/exp11 
+https://github.com/shantnu108/fsd-2-CU/tree/main/exp11
 
 - **Live Deployment (Render):**  
 
@@ -118,9 +118,9 @@ This experiment successfully demonstrated the implementation of a microservice-b
 
 ## 👨‍💻 Author
 
-**Bedant Singhania**  
-23BDA70122
+**Shantnu Kumar Swami**  
+23BDA70057
 BE CSE (Big Data Analytics)  
 Chandigarh University  
 
-🔗 GitHub: https://github.com/Bedant186
+🔗 GitHub: https://github.com/shantnu108
