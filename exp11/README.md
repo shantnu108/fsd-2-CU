@@ -91,10 +91,10 @@ https://github.com/shantnu108/fsd-2-CU/tree/main/exp11
 - **Live Deployment (Render):**  
 
   - Customer Service:  
-    https://two3bda70122-experiment-11a.onrender.com/  
+    https://two3bda70057-exp11.onrender.com/ 
 
   - Order Service:  
-    https://two3bda70122-expepriment-11b.onrender.com/ 
+    https://exp-11-6en3.onrender.com/
 
 ---
 
