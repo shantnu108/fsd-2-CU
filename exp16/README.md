@@ -41,5 +41,12 @@ The frontend is built with React and Vite. It contains a `ContactForm` component
    npm run test -- --run
    ```
 
+## Learning Outcomes
+After completing this experiment, you will understand:
+- How to set up and run unit tests for Flask backend APIs using pytest
+- How to test React components with Vitest and React Testing Library
+- How to configure GitHub Actions for automated CI/CD testing workflows
+- Best practices for maintaining test coverage across full-stack applications
+
 ## GitHub Actions
 The `.github/workflows/main.yml` file contains a configuration for running both backend and frontend tests automatically when code is pushed to the `main` branch.
