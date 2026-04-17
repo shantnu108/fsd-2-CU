@@ -22,12 +22,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd Experiment-16/backend
+          cd exp16/backend
           pip install -r requirements.txt
 
       - name: Run Pytest
         run: |
-          cd Experiment-16/backend
+          cd exp16/backend
           pytest tests/
 
   frontend-test:
@@ -43,10 +43,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd Experiment-16/frontend
+          cd exp16/frontend
           npm install
 
       - name: Run Vitest
         run: |
-          cd Experiment-16/frontend
+          cd exp16/frontend
           npm run test -- --run
