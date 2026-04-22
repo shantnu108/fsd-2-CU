@@ -22,7 +22,16 @@ if database_url:
     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 elif db_user and db_host and db_name:
     # Uses MySQL connection details from .env
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    try:
+        app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+        # Test connection
+        with app.app_context():
+            db.engine.connect()
+    except Exception as e:
+        print(f"MySQL connection failed: {e}")
+        # Fallback to SQLite for Render deployment
+        basedir = os.path.abspath(os.path.dirname(__file__))
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'students.db')
 else:
     # Fallback: SQLite for local development (no external DB needed)
     basedir = os.path.abspath(os.path.dirname(__file__))
