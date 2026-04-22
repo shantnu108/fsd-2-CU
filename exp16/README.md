@@ -50,3 +50,6 @@ After completing this experiment, you will understand:
 
 ## GitHub Actions
 The `.github/workflows/main.yml` file contains a configuration for running both backend and frontend tests automatically when code is pushed to the `main` branch.
+
+<img width="1918" height="970" alt="image" src="https://github.com/user-attachments/assets/95c94d06-b7d5-47a0-89c8-5368d2f1b32b" />
+
