@@ -208,10 +208,12 @@ git push origin main
 ## 📸 Screenshots
 
 ### Docker Image & Running Container (CLI)
-![Docker CLI Screenshot](SS/docker-cli.png)
+<img width="1919" height="1018" alt="docker image" src="https://github.com/user-attachments/assets/60996772-24cc-4366-b83c-22be07c969a8" />
+
 
 ### GitHub Actions Workflow
-![GitHub Actions Screenshot](SS/github-actions.png)
+<img width="1919" height="971" alt="github test" src="https://github.com/user-attachments/assets/f4728ffd-c1a9-44b5-a363-edc4feda7b7f" />
+
 
 ---
 
@@ -231,6 +233,6 @@ git push origin main
 
 ## 👤 Author
 
-**Jatin** — UID: 23BDA70054
+**Shantnu** — UID: 23BDA70057
 
 ---
