@@ -9,16 +9,25 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Fetch database connection details from environment variables
-db_user = os.getenv('DB_USER', 'root')
-db_password = os.getenv('DB_PASSWORD', '')
-db_host = os.getenv('DB_HOST', 'localhost')
+# Database configuration
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
+db_host = os.getenv('DB_HOST')
 db_port = os.getenv('DB_PORT', '3306')
-db_name = os.getenv('DB_NAME', 'student_db')
+db_name = os.getenv('DB_NAME')
+database_url = os.getenv('DATABASE_URL')
 
-# Configure SQLAlchemy connection URL for MySQL
-# Format: mysql+pymysql://username:password@host:port/database_name
-app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+if database_url:
+    # Uses DATABASE_URL if set directly (for production/Render)
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+elif db_user and db_host and db_name:
+    # Uses MySQL connection details from .env
+    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+else:
+    # Fallback: SQLite for local development (no external DB needed)
+    basedir = os.path.abspath(os.path.dirname(__file__))
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'students.db')
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
