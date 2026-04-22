@@ -12,9 +12,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						""
@@ -39,9 +39,9 @@
 					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"age\": 20,\n    \"course\": \"Computer Science\"\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/students",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/students",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						"students"
@@ -56,9 +56,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/students",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/students",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						"students"
@@ -73,9 +73,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/students/1",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/students/1",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						"students",
@@ -101,9 +101,9 @@
 					"raw": "{\n    \"name\": \"John Doe Updated\",\n    \"email\": \"john.doe@example.com\",\n    \"age\": 21,\n    \"course\": \"Computer Science Specialization\"\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/students/1",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/students/1",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						"students",
@@ -119,9 +119,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/students/1",
+					"raw": "https://fsd-2-cu-23bda70057.onrender.com/students/1",
 					"host": [
-						"{{base_url}}"
+						"fsd-2-cu-23bda70057.onrender.com"
 					],
 					"path": [
 						"students",
