@@ -1,0 +1,52 @@
+name: End Practical CU CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'endpracticalcu/**'
+      - '.github/workflows/endpracticalcu.yml'
+
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          cd endpracticalcu/backend
+          pip install -r requirements.txt
+
+      - name: Run Pytest
+        run: |
+          cd endpracticalcu/backend
+          pytest tests/
+
+  frontend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Dependencies
+        run: |
+          cd endpracticalcu/frontend
+          npm install
+
+      - name: Run Vitest
+        run: |
+          cd endpracticalcu/frontend
+          npm run test
