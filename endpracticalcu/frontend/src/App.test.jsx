@@ -3,9 +3,9 @@ import { describe, it, expect } from 'vitest';
 import App from './App';
 
 describe('App', () => {
-  it('renders a headline', () => {
+  it('renders student name', () => {
     render(<App />);
-    const headline = screen.getByText(/Get started/i);
-    expect(headline).toBeInTheDocument();
+    const nameElement = screen.getByText(/Shantnu/i);
+    expect(nameElement).toBeInTheDocument();
   });
 });
